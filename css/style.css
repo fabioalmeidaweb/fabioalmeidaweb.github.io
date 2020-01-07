@@ -706,7 +706,7 @@ header label {
   margin: 0 !important;
 }
 .post-wrap .post-title {
-  font-size: 2em;
+  font-size: 2.5em;
   line-height: 1.5em;
 }
 .post-wrap .post-meta {
@@ -1335,4 +1335,34 @@ header label {
 .post-content pre .keyword,
 .post-content pre .javascript .function {
   color: #8959a8;
+}
+h1:before {
+  content: "#";
+  margin-right: 5px;
+  color: #2d96bd;
+}
+.dark-theme h1:before {
+  color: #eee;
+}
+.post-title {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  font-size: 3em;
+}
+.post-items {
+  padding-top: 2em;
+}
+.post-items .post-item h2 {
+  font-weight: 300;
+  display: inline-block;
+}
+.post-items .post-item .archive-item-date {
+  float: none;
+  padding-left: 20px;
+}
+::selection {
+  background: #bce1ef;
 }

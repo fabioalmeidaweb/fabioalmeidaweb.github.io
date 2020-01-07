@@ -1,0 +1,30 @@
+h1:before {
+  content: "#";
+  margin-right: 5px;
+  color: $light-post-link-color;
+}
+.dark-theme h1:before {
+  color: $dark-post-link-color;
+}
+.post-title {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  font-size: 3em;
+}
+.post-items {
+  padding-top: 2em;
+}
+.post-items .post-item h2 {
+  font-weight: 300;
+  display: inline-block;
+}
+.post-items .post-item .archive-item-date {
+  float: none;
+  padding-left: 20px;
+}
+::selection {
+  background: $light-post-table-background-color;
+}
