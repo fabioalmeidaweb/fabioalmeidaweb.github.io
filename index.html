@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-44712427-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-44712427-2');
+</script>
+
     <meta charset="UTF-8">
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -58,6 +67,8 @@
             <div class="navbar-header header-logo"><a href="/">FabioAlmeidaWeb</a></div>
             <div class="menu navbar-right">
                 
+                    <a class="menu-item" href="/posts">Posts</a>
+                
                     <a class="menu-item" href="/about">About</a>
                 
                 <input id="switch_default" type="checkbox" class="switch_default">
@@ -77,6 +88,8 @@
                 <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
             </div>
             <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/posts">Posts</a>
                 
                     <a class="menu-item" href="/about">About</a>
                 
@@ -100,36 +113,20 @@
 </script>
         <div class="main">
             
-    <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/"><img src="/image/me.jpg"></a>
-        </div>
-        <div class="nickname">Fabio Almeida</div>
-        <div class="description"><p>Full stack developer working with PHP, Drupal, Node and the mosts powerfull front-end tools.</p>
-</div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="LinkedIn" href="https://linkedin.com/in/fabioalmeida" target="_blank" rel="noopener">
-                        
-                        
-                            <i class="iconfont icon-linkedin"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Github" href="https://github.com/fabioalmeidaweb" target="_blank" rel="noopener">
-                        
-                        
-                            <i class="iconfont icon-github"></i>
-                        
-                    </a>
-                
-            
-        </div>
+    
+    <div class="post-wrap posts">
+    <h1 class="post-title">Posts</h1>
+    <div class="post-items">
+        
+            <article class="post-item">
+                <a class="post-item-link" href="/creating-node-translation-programmatically/">
+                    <h2>Creating node translation programmatically</h2>
+                </a>
+                <span class="archive-item-date">January 7, 2020</span>
+            </article>
+        
     </div>
 </div>
-
 
         </div>
         <footer id="footer" class="footer">

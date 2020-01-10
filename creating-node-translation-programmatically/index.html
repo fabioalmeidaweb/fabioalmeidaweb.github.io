@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-44712427-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-44712427-2');
+</script>
+
     <meta charset="UTF-8">
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -16,7 +25,7 @@
 
 
 
-<title>Hello World with a big named file | Fabio Almeida&#39;s</title>
+<title>Creating node translation programmatically | Fabio Almeida&#39;s</title>
 
 
 
@@ -58,6 +67,8 @@
             <div class="navbar-header header-logo"><a href="/">FabioAlmeidaWeb</a></div>
             <div class="menu navbar-right">
                 
+                    <a class="menu-item" href="/posts">Posts</a>
+                
                     <a class="menu-item" href="/about">About</a>
                 
                 <input id="switch_default" type="checkbox" class="switch_default">
@@ -77,6 +88,8 @@
                 <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
             </div>
             <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/posts">Posts</a>
                 
                     <a class="menu-item" href="/about">About</a>
                 
@@ -168,7 +181,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World with a big named file</h1>
+            <h1 class="post-title">Creating node translation programmatically</h1>
             
                 <div class="post-meta">
                     
@@ -177,16 +190,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">January 6, 2020&nbsp;&nbsp;8:59:19</a>
+                        Date: <a href="#">January 7, 2020&nbsp;&nbsp;18:14:05</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Drupal/">Drupal</a>
-                            
-                                <a href="/categories/Drupal/Node/">Node</a>
+                                <a href="/categories/drupal/">drupal</a>
                             
                         </span>
                     
@@ -195,7 +206,12 @@
         </header>
 
         <div class="post-content">
-            <h1 id="Hello"><a href="#Hello" class="headerlink" title="Hello!"></a>Hello!</h1><h2 id="World"><a href="#World" class="headerlink" title="World!"></a>World!</h2>
+            <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>You need to create translation for a large number of nodes fast.</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>You need enable the translation in Configuration &gt; Regional and Language &gt; Content language and translation. Then, you can proccess the following script:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// In this case, I'm translating all "pages"</span></span><br><span class="line">$nids = \Drupal::entityQuery(<span class="string">'node'</span>)-&gt;condition(<span class="string">'type'</span>,<span class="string">'page'</span>)-&gt;execute(); </span><br><span class="line">$nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);</span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> ($nodes <span class="keyword">as</span> $node) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!$node-&gt;hasTranslation(<span class="string">'es'</span>)) &#123;</span><br><span class="line">    $node-&gt;addTranslation(<span class="string">'es'</span>, $node-&gt;toArray());</span><br><span class="line">    $node-&gt;save();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>You can create a custom module pro proccess a hook_update or use other alternative, like <a href="https://www.drupal.org/project/devel_php" target="_blank" rel="noopener">Devel PHP</a> module.</p>
+
         </div>
 
         <section class="post-tags">
@@ -203,6 +219,12 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/entity/"># entity</a>
+                    
+                        <a href="/tags/translation/"># translation</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -212,8 +234,6 @@
             </div>
         </section>
         <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/drupal/">Hello Drupal</a>
             
             
         </section>
