@@ -25,7 +25,7 @@
 
 
 
-<title>Posts | Fabio Almeida&#39;s</title>
+<title>Downloading an Entire Website | Fabio Almeida&#39;s</title>
 
 <link rel="apple-touch-icon" sizes="57x57" href="/image/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/image/favicon/apple-icon-60x60.png">
@@ -125,27 +125,81 @@
     }
 </script>
         <div class="main">
+            <div class="container">
+    
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Downloading an Entire Website</h1>
             
-<div class="post-wrap posts">
-    <h1 class="post-title">Posts</h1>
-    <div class="post-items">
-        
-            <article class="post-item">
-                <a class="post-item-link" href="/downloading-an-entire-website/">
-                    <h2>Downloading an Entire Website</h2>
-                </a>
-                <span class="archive-item-date">January 24, 2020</span>
-            </article>
-        
-            <article class="post-item">
-                <a class="post-item-link" href="/creating-node-translation-programmatically/">
-                    <h2>Creating Node Translation Programmatically</h2>
-                </a>
-                <span class="archive-item-date">January 7, 2020</span>
-            </article>
-        
-    </div>
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Fabio Almeida</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">January 24, 2020&nbsp;&nbsp;9:58:52</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Tools/">Tools</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>To transform a legacy website like a Wordpress or Drupal to a static website, you can use the <strong>wget</strong> command. If you are using Linux based system, probably you already have this tool available. If you are using Windows, you can follow this tutorial by <a href="https://builtvisible.com/download-your-website-with-wget/" target="_blank" rel="noopener">Builtvisible</a>.</p>
+<p>To get the entire website using this command, is quite easy:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --page-requisites --adjust-extension --span-hosts --domains yoursite.com --no-parent https://yoursite.com/</span><br></pre></td></tr></table></figure>
+
+<p>It will get all the assets and linked pages. You can check the explanation for each flag here:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wget \</span><br><span class="line">     --recursive \ <span class="comment"># Download the whole site.</span></span><br><span class="line">     --page-requisites \ <span class="comment"># Get all assets/elements (CSS/JS/images).</span></span><br><span class="line">     --adjust-extension \ <span class="comment"># Save files with .html on the end.</span></span><br><span class="line">     --span-hosts \ <span class="comment"># Include necessary assets from offsite as well.</span></span><br><span class="line">     --domains yoursite.com \ <span class="comment"># Do not follow links outside this domain.</span></span><br><span class="line">     --no-parent \ <span class="comment"># Don't follow links outside the directory you pass in.</span></span><br><span class="line">         yoursite.com/whatever/path <span class="comment"># The URL to download</span></span><br></pre></td></tr></table></figure>
+
+<p>Credits to <a href="https://gist.github.com/mikecrittenden" target="_blank" rel="noopener">mikecrittenden</a> for <a href="https://gist.github.com/mikecrittenden/fe02c59fed1aeebd0a9697cf7e9f5c0c" target="_blank" rel="noopener">this helpful command</a>.</p>
+
+        </div>
+
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/wget/"># wget</a>
+                    
+                        <a href="/tags/linux/"># linux</a>
+                    
+                        <a href="/tags/tools/"># tools</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/creating-node-translation-programmatically/">Creating Node Translation Programmatically</a>
+            
+        </section>
+
+
+    </article>
 </div>
+
         </div>
         <footer id="footer" class="footer">
     <div class="copyright">
