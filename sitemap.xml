@@ -4,22 +4,12 @@
 
     <sitemap>
         <loc>https://fabioalmeidaweb.github.io/post-sitemap.xml</loc>
-        <lastmod>2020-01-24T12:39:52.189Z</lastmod>
+        <lastmod>2020-02-17T20:22:30.034Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://fabioalmeidaweb.github.io/page-sitemap.xml</loc>
         <lastmod>2020-01-07T20:02:07.626Z</lastmod>
-    </sitemap>
-
-    <sitemap>
-        <loc>https://fabioalmeidaweb.github.io/category-sitemap.xml</loc>
-        <lastmod>2020-01-24T12:39:52.189Z</lastmod>
-    </sitemap>
-
-    <sitemap>
-        <loc>https://fabioalmeidaweb.github.io/tag-sitemap.xml</loc>
-        <lastmod>2020-01-24T12:39:52.189Z</lastmod>
     </sitemap>
 
 </sitemapindex>

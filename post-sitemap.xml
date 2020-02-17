@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://fabioalmeidaweb.github.io/testing-headers-and-redirects-with-curl/</loc>
+        <lastmod>2020-02-17T20:22:30.034Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://fabioalmeidaweb.github.io/downloading-an-entire-website/</loc>
         <lastmod>2020-01-24T12:39:52.189Z</lastmod>
         <changefreq>weekly</changefreq>
