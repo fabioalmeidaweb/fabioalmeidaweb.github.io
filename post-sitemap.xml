@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://fabioalmeidaweb.github.io/checking-the-size-of-each-table-in-the-database/</loc>
+        <lastmod>2020-03-25T17:08:02.247Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://fabioalmeidaweb.github.io/testing-headers-and-redirects-with-curl/</loc>
         <lastmod>2020-02-20T11:18:06.305Z</lastmod>
         <changefreq>weekly</changefreq>
