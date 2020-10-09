@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>https://fabioalmeidaweb.github.io/creating-node-translation-programmatically/</loc>
+        <lastmod>2020-10-09T20:25:43.077Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://fabioalmeidaweb.github.io/replacing-field-configs-with-drush-commands/</loc>
+        <lastmod>2020-10-09T20:25:25.597Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://fabioalmeidaweb.github.io/checking-the-size-of-each-table-in-the-database/</loc>
         <lastmod>2020-03-25T17:08:02.247Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -26,14 +42,6 @@
     <url>
         <loc>https://fabioalmeidaweb.github.io/downloading-an-entire-website/</loc>
         <lastmod>2020-01-24T12:39:52.189Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://fabioalmeidaweb.github.io/creating-node-translation-programmatically/</loc>
-        <lastmod>2020-01-14T20:20:49.311Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

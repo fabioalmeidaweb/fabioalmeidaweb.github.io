@@ -18,7 +18,7 @@
 <meta name="description" content="A programming blog, with tips and tricks about Node.js, Drupal or wherever I'm using and studying.">
 
 
-<title>Archives | Fabio Almeida&#39;s</title>
+<title>Replacing Field Configs With Drush Commands | Fabio Almeida&#39;s</title>
 
 <link rel="apple-touch-icon" sizes="57x57" href="/image/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/image/favicon/apple-icon-60x60.png">
@@ -118,58 +118,83 @@
     }
 </script>
         <div class="main">
-            <div class="post-wrap archive">
+            <div class="container">
     
     
-        
 
-        
-            <h3>2020</h3>
-        
-
-        <article class="archive-item">
-            <a class="archive-item-link" href="/replacing-field-configs-with-drush-commands/">Replacing Field Configs With Drush Commands</a>
-            <span class="archive-item-date">October 9, 2020</span>
-        </article>
     
-        
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Replacing Field Configs With Drush Commands</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Fabio Almeida</a>
+                    
 
-        
+                    
+                        <span class="post-time">
+                        Date: <a href="#">October 9, 2020&nbsp;&nbsp;17:03:22</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Drupal/">Drupal</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
 
-        <article class="archive-item">
-            <a class="archive-item-link" href="/checking-the-size-of-each-table-in-the-database/">Checking the Size of Each Table in the Database</a>
-            <span class="archive-item-date">March 25, 2020</span>
-        </article>
-    
-        
+        <div class="post-content">
+            <p>There is a way to update configurations directly by drush commands. To find the configuration type and the configuration name, you can access <strong>/admin/config/development/configuration/single/export</strong> and research about you desired config. Then, you can find the filename.</p>
+<p>In my case I was trying to updated the status field (Published/Unpublished) to be translated. found it on the bottom of the page after select my desired configuration:</p>
+<blockquote>
+<p><em>Filename: core.base_field_override.node.product.status.yml</em></p>
+</blockquote>
+<p>So, to turn it translatable, I execute this command:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drush cset core.base_field_override.node.product.status translatable true</span><br></pre></td></tr></table></figure>
 
-        
+<p>Explaining:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">drush cset / # drush cset is an alias to command drush config:set</span><br><span class="line">core.base_field_override.node.product.status / # here you put the config file to be edited</span><br><span class="line">translatable / # here is the key to be updated</span><br><span class="line">true # here you can put the value to be uptaded</span><br></pre></td></tr></table></figure>
 
-        <article class="archive-item">
-            <a class="archive-item-link" href="/testing-headers-and-redirects-with-curl/">Testing Headers and Redirects With cURL</a>
-            <span class="archive-item-date">February 17, 2020</span>
-        </article>
-    
-        
+        </div>
 
-        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/translation/"># translation</a>
+                    
+                        <a href="/tags/drush/"># drush</a>
+                    
+                        <a href="/tags/command/"># command</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/checking-the-size-of-each-table-in-the-database/">Checking the Size of Each Table in the Database</a>
+            
+        </section>
 
-        <article class="archive-item">
-            <a class="archive-item-link" href="/downloading-an-entire-website/">Downloading an Entire Website</a>
-            <span class="archive-item-date">January 24, 2020</span>
-        </article>
-    
-        
 
-        
-
-        <article class="archive-item">
-            <a class="archive-item-link" href="/creating-node-translation-programmatically/">Creating Node Translation Programmatically</a>
-            <span class="archive-item-date">January 7, 2020</span>
-        </article>
-    
-    
+    </article>
 </div>
+
         </div>
         <footer id="footer" class="footer">
     <div class="copyright">
